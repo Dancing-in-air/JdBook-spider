@@ -5,7 +5,7 @@ import sys
 
 def main():
     sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-    execute(["scrapy", "crawl", "book"])
+    execute(["scrapy", "crawl", "book2"])
 
 
 if __name__ == '__main__':

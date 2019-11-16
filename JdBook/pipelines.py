@@ -16,5 +16,5 @@ class JdbookPipeline(object):
     def process_item(self, item, spider):
         # 去除空白符
         item["book_name"] = re.sub(r"\s", "", item["book_name"])
-        self.collection.insert(item)
+        # self.collection.insert(item)
         pprint(item)
