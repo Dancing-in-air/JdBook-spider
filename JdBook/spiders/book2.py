@@ -56,15 +56,12 @@ class BookSpider(scrapy.Spider):
             yield scrapy.Request(book_price_url, callback=self.parse_price, meta={"item": deepcopy(item)},
                                  dont_filter=False)
 
-
-
     def parse_price(self, response):
         """
         获取图书价格
-        :param url:
+        :param response:
         :return:
         """
         item = response.meta["item"]
         item["book_price"] = json.loads(response.body.decode())[0]["op"]
         yield item
-

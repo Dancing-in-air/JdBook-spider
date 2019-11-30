@@ -18,7 +18,12 @@ LOG_LEVEL = "WARNING"
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = True
-REDIS_URL = "redis://127.0.0.1:6379"
+
+# 添加redis配置信息:地址/端口/密码
+# REDIS_URL = "redis://127.0.0.1:6379"
+REDIS_HOST = "127.0.0.1"
+REDIS_PORT = 6379
+REDIS_PARAMS = {"password": 123456, }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36'
